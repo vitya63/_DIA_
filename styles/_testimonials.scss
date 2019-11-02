@@ -1,0 +1,121 @@
+.testimonials {
+  box-sizing: border-box;
+  height: 688px;
+  background-color: #fff;
+  padding: 110px 14vw;
+
+  &__headings {
+    max-width: 362px;
+    margin-bottom: 86px;
+  }
+
+  &__blocks-section {
+    display: grid;
+    grid-template-columns: repeat(3, 23vw);
+    justify-content: center;
+    grid-gap: 0 40px;
+  }
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 58px 32px;
+    background: #FEFEFE;
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.05);
+  }
+
+  &__graphic {
+    display: flex;
+    justify-content: center;
+
+    &_color {
+      position: absolute;
+      width: 161.9px;
+      height: 64px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #FCC304;
+      border-radius: 500px;
+      transform: rotate(-65deg);
+
+      &_1 {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #56CCF2;
+      }
+      
+      &_3 {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #F25656;
+      }
+    }
+
+    &_pic {
+      z-index: 2;
+    }
+  }
+
+  &__paragraphs {
+    font-style: italic;
+    font-size: 14.4px;
+    line-height: 150%;
+    text-align: center;
+    color: #253757;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 64px;
+      margin-top: 31px;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #56CCF2;
+      border-radius: 500px;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+
+    &_2::after {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #FCC304;
+    }
+
+    &_3::after {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #F25656;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 12.6px;
+    line-height: 150%;
+    text-align: center;
+    color: #152032;
+    margin-top: 31px;
+  }
+
+  &__position_1, &__position_2, &__position_3 {
+    font-weight: 800;
+    font-size: 12.6px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FCC304;
+  }
+
+  &__position_1 {
+    color: #56CCF2;
+  }
+
+  &__position_3 {
+    color: #F25656;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .testimonials {
+    height: 1500px;
+    padding: 110px 5vw;
+
+    &__blocks-section {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+html, body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Muli, arial, sans-serif;
+  font-size: 16px;
+  background-color: #E5E5E5;
+}
+
+h2, h3 {
+  color: #253757;
+  font-weight: 900;
+}
+
+@import 'header';
+@import 'upper-picture';
+@import 'heading';
+@import 'welcome';
+@import 'our-business';
+@import 'process';
+@import 'features';
+@import 'testimonials';
+@import 'vision';
+@import 'footer';
