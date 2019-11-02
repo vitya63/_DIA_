@@ -1,0 +1,19 @@
+.heading {
+  font-weight: 800;
+  line-height: 150%;
+  letter-spacing: 2px;
+  color: #56CCF2;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  &_pic {
+    margin-right: 16px;
+  }
+}
+
+.subheading {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 140%;
+  margin-bottom: 64px;
+}

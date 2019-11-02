@@ -1,0 +1,137 @@
+.process {
+  padding: 0 4vw;
+  background-color: #fff;
+
+  &__content {
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 110px 160px;
+    box-sizing: border-box;
+    background-color: #E5E5E5;
+    min-height: 816px;
+  }
+}
+
+.article {
+  width: 29vw;
+  max-width: 500px;
+
+  &__text {
+    line-height: 150%;
+    color: #334563;
+    mix-blend-mode: normal;
+  }
+}
+
+.cubes {
+  position: absolute;
+  top: 224.55px;
+  right: 4vw;
+  display: grid;
+  grid-template-columns: 240px 240px;
+  grid-template-rows: 384px 384px;
+  grid-gap: 0 2vw;
+
+  .cube {
+    height: 256px;
+    background-color: #fff;
+    padding: 48px 32px;
+    box-sizing: border-box;
+    box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &_1, &_3 {
+      align-self: end;
+    }
+
+    &__num {
+      width: 48px;
+      height: 48px;
+      border-radius: 24px;
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: 2px;
+      padding-top: 16px;
+      box-sizing: border-box;
+
+      &_1 {
+        background: #f1fbfe;
+        color: #66d1f3;
+      }
+
+      &_2 {
+        background: #fffae8;
+        color: #fcd245;
+      }
+
+      &_3 {
+        background: #e9fbee;
+        color: #25da5b;
+      }
+
+      &_4 {
+        background: #fef0f0;
+        color: #f36262;
+      }
+    }
+
+    &__text {
+      font-size: 12.6px;
+      line-height: 150%;
+      text-align: center;
+      color: #253757;
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .process__content {
+    padding: 110px 45px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .article {
+    width: 50vw;
+    margin: 0 auto 50px;
+  }
+
+  .cubes {
+    position: static;
+    grid-gap: 2vw;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .process__content {
+    padding: 110px 1px 0;
+  }
+
+  .article {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .cubes {
+    grid-template-columns: 200px 200px;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .cubes {
+    grid-template-columns: 160px 160px;
+    grid-template-rows: 300px 300px;
+    grid-gap: 0;
+
+    .cube {
+      height: 300px;
+    }
+  }
+}

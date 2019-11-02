@@ -1,0 +1,147 @@
+.header {
+  height: 750px;
+  background-color: #56CCF2;
+  color: white;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 45vw;
+    width: 130vw;
+    background-color: #e5e5e5;
+    transform: translate(45vw, 0) rotate(-65.1deg);
+  }
+
+  &__content {
+    position: absolute;
+    top: 48px;
+    left: 14.2vw;
+    width: 59vw;
+    z-index: 2;
+    max-width: 1300px;
+  }
+
+  &__nav {
+    margin-bottom: 76px;
+  }
+
+  &__heading {
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+  }
+
+  &__paragraph {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 42px;
+  }
+
+  &__btn {
+    width: 226px;
+    height: 56px;
+    cursor: pointer;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 64px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:hover {
+      background: #bff;
+    }
+  }
+
+  &__text {
+    width: 47.1vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+
+  &__items {
+    &:first-of-type {
+      margin-right: 4vw;
+    }
+
+    &:last-of-type {
+      margin-left: 4vw;
+    }
+
+    &_logo {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 1;
+    }
+  }
+
+  &__links {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0,2s;
+    line-height: 1.5;
+
+    &:not(&_active) {
+      &:hover {
+        color: #eee;
+      }
+    }
+
+    &_active {
+      &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        background-color: #FCC304;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .header {
+    width: 100%;
+
+    &::after {
+      display: none;
+    }
+
+    &__content {
+      width: 92vw;
+      left: 4vw;
+    }
+
+    &__text {
+      width: 90vw;
+      text-align: center;
+    }
+
+    &__paragraph {
+      margin-bottom: 22px;
+    }
+
+    .menu {
+      flex-direction: column;
+
+      &__items {
+        &:first-of-type, &:last-of-type {
+          margin: 0;
+        }
+
+        &_logo {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
